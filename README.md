@@ -71,3 +71,6 @@ Then open the printed local URL (typically `http://localhost:5173`).
 - The backend expects a valid `OPENWEATHER_API_KEY` in `.env` to fetch live weather and forecasts.
 - The YouTube integration is optional; if you don't set `YOUTUBE_API_KEY`, the app will simply show a helpful message instead of videos.
 - Update the footer text in `Layout.jsx` to include your real name as requested in the assessment.
+
+![Full Weather App Flow](https://github.com/user-attachments/assets/e751ef51-291f-4c35-ac1a-9d8789f8c02d)
+
