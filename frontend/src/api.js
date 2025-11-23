@@ -1,8 +1,6 @@
 import axios from 'axios'
 
-// For now, hard-code the backend base URL so we know it's correct.
-const API_BASE = 'https://weather-app-cwk9.onrender.com/api'
-
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://weather-app-cwk9.onrender.com/api'
 const client = axios.create({
   baseURL: API_BASE,
 })
@@ -41,6 +39,7 @@ export async function fetchExtras(locationName, lat, lon) {
 
 export async function exportData(format) {
   if (format === 'csv') {
+    // Let browser handle download
     const url = `${API_BASE}/export?fmt=csv`
     window.open(url, '_blank')
     return
